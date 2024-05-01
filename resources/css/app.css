@@ -1,0 +1,69 @@
+@import 'leaflet/dist/leaflet.css';
+
+.map-container {
+    height: 420px;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #dde5e1;
+    z-index: 0;
+}
+
+.map-container.map-sm {
+    height: 320px;
+}
+
+.leaflet-popup-content {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 0.9rem;
+}
+
+.driver-marker {
+    background: #0d6e4f;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.stop-marker {
+    background: #f4a024;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.stop-marker.passed {
+    background: #adb5bd;
+}
+
+.stop-marker.next {
+    background: #0d6e4f;
+    width: 16px;
+    height: 16px;
+}
+
+.live-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: #0f5132;
+    font-weight: 600;
+}
+
+.live-indicator::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #198754;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
